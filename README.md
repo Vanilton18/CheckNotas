@@ -14,7 +14,7 @@ jUnit
 Configuração
 ==========
 
-Necessário criar um arquivo no caminho windows "C:/keys/dados.properties"
+Necessário criar um arquivo no caminho windows "C://keys//dados.properties"
 
 OBS: Não alterar o nome por que está definido assim no código.
 

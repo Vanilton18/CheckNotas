@@ -1,13 +1,15 @@
 package br.checknotaspos.test;
 
 import static org.junit.Assert.assertEquals;
+
 import java.util.concurrent.TimeUnit;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,7 +19,7 @@ public class TestCheckNotasPos {
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-		driver = new HtmlUnitDriver();
+		driver = new FirefoxDriver();
 		baseUrl = "https://sicanet.uninorte.com.br";
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.get(baseUrl + "/");
@@ -154,7 +156,7 @@ public class TestCheckNotasPos {
 	public void NotasProjetoInterfaceHomemComputador() {
 		assertEquals("PROJETO DE INTERFACE HOMEM-COMPUTADOR".trim(), driver
 				.findElement(By.xpath("//tr[14]/td")).getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[14]/td[2]"))
+		assertEquals("9", driver.findElement(By.xpath("//tr[14]/td[2]"))
 				.getText().trim());
 
 	}
