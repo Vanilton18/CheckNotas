@@ -64,7 +64,7 @@ public class TestCheckNotasPos {
 	public void NotaComputacaoNuvens() {
 		assertEquals("COMPUTAÇÃO EM NUVENS".trim(),
 				driver.findElement(By.xpath("//tr[4]/td")).getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[4]/td[2]"))
+		assertEquals("9", driver.findElement(By.xpath("//tr[4]/td[2]"))
 				.getText().trim());
 
 	}
