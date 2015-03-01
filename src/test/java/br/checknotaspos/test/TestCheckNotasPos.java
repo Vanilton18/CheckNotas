@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,7 +19,7 @@ public class TestCheckNotasPos {
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-		driver = new FirefoxDriver();
+		driver = new HtmlUnitDriver();
 		baseUrl = "https://sicanet.uninorte.com.br";
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.get(baseUrl + "/");
@@ -47,7 +47,7 @@ public class TestCheckNotasPos {
 				driver.findElement(
 						By.xpath("html/body/table[6]/tbody/tr[2]/td[1]"))
 						.getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[2]/td[2]"))
+		assertEquals("10", driver.findElement(By.xpath("//tr[2]/td[2]"))
 				.getText().trim());
 	}
 
