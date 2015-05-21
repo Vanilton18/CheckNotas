@@ -55,7 +55,7 @@ public class TestCheckNotasPos {
 	public void NotaBancoDeDados() {
 		assertEquals("BANCO DE DADOS PARA SISTEMAS WEB".trim(), driver
 				.findElement(By.xpath("//tr[3]/td")).getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[3]/td[2]"))
+		assertEquals("10", driver.findElement(By.xpath("//tr[3]/td[2]"))
 				.getText().trim());
 
 	}
@@ -209,7 +209,7 @@ public class TestCheckNotasPos {
 	public void NotasTestesAplicacoesWeb() {
 		assertEquals("TESTES DE APLICAÇÕES WEB".trim(),
 				driver.findElement(By.xpath("//tr[20]/td")).getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[20]/td[2]"))
+		assertEquals("10", driver.findElement(By.xpath("//tr[20]/td[2]"))
 				.getText().trim());
 
 	}
