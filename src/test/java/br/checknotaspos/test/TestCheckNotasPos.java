@@ -100,7 +100,7 @@ public class TestCheckNotasPos {
 	public void NotasMetodologiaPesquisa() {
 		assertEquals("METODOLOGIA DA PESQUISA CIENTÍFICA".trim(), driver
 				.findElement(By.xpath("//tr[8]/td")).getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[8]/td[2]"))
+		assertEquals("9,9", driver.findElement(By.xpath("//tr[8]/td[2]"))
 				.getText().trim());
 
 	}
