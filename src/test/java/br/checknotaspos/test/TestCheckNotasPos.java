@@ -165,7 +165,7 @@ public class TestCheckNotasPos {
 	public void NotasProjetoInterfacesSistemaWeb() {
 		assertEquals("PROJETO DE INTERFACES PARA SISTEMAS WEB".trim(), driver
 				.findElement(By.xpath("//tr[15]/td")).getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[15]/td[2]"))
+		assertEquals("9,5", driver.findElement(By.xpath("//tr[15]/td[2]"))
 				.getText().trim());
 
 	}
