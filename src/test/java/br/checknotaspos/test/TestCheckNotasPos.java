@@ -160,7 +160,8 @@ public class TestCheckNotasPos {
 				.getText().trim());
 
 	}
-
+	
+	@Test
 	public void NotasProjetoInterfacesSistemaWeb() {
 		assertEquals("PROJETO DE INTERFACES PARA SISTEMAS WEB".trim(), driver
 				.findElement(By.xpath("//tr[15]/td")).getText().trim());
