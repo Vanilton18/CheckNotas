@@ -109,7 +109,7 @@ public class TestCheckNotasPos {
 	public void NotasMetodologiaEnsinoSuperior() {
 		assertEquals("METODOLOGIA DO ENSINO SUPERIOR".trim(), driver
 				.findElement(By.xpath("//tr[9]/td")).getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[9]/td[2]"))
+		assertEquals("9,5", driver.findElement(By.xpath("//tr[9]/td[2]"))
 				.getText().trim());
 
 	}
