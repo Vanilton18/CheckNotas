@@ -16,6 +16,12 @@ Configuração
 
 Necessário criar um arquivo no caminho windows "C://keys//dados.properties"
 
+Adicionar ao path da máquina o executável do PhantonJS disponível em:
+
+
+https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-windows.zip
+
+
 OBS: Não alterar o nome por que está definido assim no código.
 
 No arquivo deve estar contido:

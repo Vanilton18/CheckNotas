@@ -8,10 +8,15 @@
 	<description>Verificar de alterações do curso de Pós Graduação
 	</description>
 	<properties>
-		<junit.version>4.11</junit.version>
-		<selenium.version>2.44.0</selenium.version>
+		<junit.version>4.12</junit.version>
+		<selenium.version>2.46.0</selenium.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>com.codeborne</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>1.2.1</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -21,12 +26,6 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>${selenium.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-server</artifactId>
 			<version>${selenium.version}</version>
 			<scope>test</scope>
 		</dependency>

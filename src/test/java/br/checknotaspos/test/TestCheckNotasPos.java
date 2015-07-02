@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,7 +19,7 @@ public class TestCheckNotasPos {
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-		driver = new HtmlUnitDriver();
+		driver = new PhantomJSDriver();
 		baseUrl = "https://sicanet.uninorte.com.br";
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.get(baseUrl + "/");
@@ -35,8 +35,8 @@ public class TestCheckNotasPos {
 		driver.findElement(By.id("btSubmit")).click();
 		driver.get("https://sicanet.uninorte.com.br/sicanet.index.php?sicanet=secretaria/demonstrativoNotas/sicanet.secretaria.demonstrativosNotas");
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By
-				.xpath("html/body/table[6]/tbody/tr[2]/td[1]"))));
+		wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By
+				.xpath("html/body/table[3]/tbody/tr/td/b[1]")),"VANILTON DE SOUZA FREIRE"));
 
 	}
 
