@@ -2,6 +2,7 @@ package br.checknotaspos.test;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
@@ -19,6 +20,7 @@ public class TestCheckNotasPos {
 
 	@BeforeClass
 	public static void setUp() throws Exception {
+		System.setProperty("phantomjs.binary.path","C:\\driver\\phantomjs.exe");
 		driver = new PhantomJSDriver();
 		baseUrl = "https://sicanet.uninorte.com.br";
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
