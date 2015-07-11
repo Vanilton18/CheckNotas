@@ -149,7 +149,7 @@ public class TestCheckNotasPos {
 				"PROGRAMAÇÃO E AMBIENTE DE DESENVOLVIMENTO DE SISTEMAS WEB"
 						.trim(),
 				driver.findElement(By.xpath("//tr[13]/td")).getText().trim());
-		assertEquals("", driver.findElement(By.xpath("//tr[13]/td[2]"))
+		assertEquals("9", driver.findElement(By.xpath("//tr[13]/td[2]"))
 				.getText().trim());
 
 	}
